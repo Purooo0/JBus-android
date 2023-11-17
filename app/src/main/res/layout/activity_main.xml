@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#21B6A8"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageButton
+        android:id="@+id/search_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:background="@color/white"
+        android:icon="@drawable/outline_search_24"
+        android:contentDescription="search_menu" />
+
+    <ImageButton
+        android:id="@+id/person_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:icon="@drawable/baseline_person_24"
+        android:contentDescription="person_menu" />
+
+    <ImageButton
+        android:id="@+id/payment_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="400dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:icon="@drawable/baseline_payments_24"
+        android:contentDescription="payment_menu" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="JBUS"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:paddingTop="-5dp"
+        android:text="make your life easier"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+</LinearLayout>

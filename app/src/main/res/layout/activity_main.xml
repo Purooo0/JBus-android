@@ -8,35 +8,31 @@
     android:background="#21B6A8"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/search_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:background="@color/white"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:background="#00FFFFFF"
         android:icon="@drawable/outline_search_24"
         android:contentDescription="search_menu" />
 
     <ImageButton
         android:id="@+id/person_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
+        android:layout_height="20dp"
+        android:background="#00FFFFFF"
         android:icon="@drawable/baseline_person_24"
         android:contentDescription="person_menu" />
 
     <ImageButton
         android:id="@+id/payment_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="400dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
+        android:background="#00FFFFFF"
         android:icon="@drawable/baseline_payments_24"
         android:contentDescription="payment_menu" />
 
@@ -48,17 +44,72 @@
         android:fontFamily="@font/audiowide"
         android:gravity="center"
         android:text="JBUS"
+        android:layout_marginTop="-380dp"
         android:textColor="@color/white"
         android:textSize="100sp"
         android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="24dp"
         android:paddingTop="-5dp"
+        android:layout_marginBottom="-70dp"
         android:text="make your life easier"
         android:textAlignment="center"
         android:textColor="@color/white" />
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="-20dp"
+        tools:context=".MainActivity" />
+
+    <LinearLayout
+        android:id="@+id/pagination_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="21dp">
+
+        <Button
+            android:id="@+id/prev_page"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#177F75"
+            app:cornerRadius="21dp"
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+            android:minHeight="0dp" />
+
+        <Button
+            android:id="@+id/next_page"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#177F75"
+            android:layout_weight="1"
+            app:cornerRadius="21dp"
+            android:drawableLeft="@drawable/baseline_arrow_forward_ios_24"
+            android:minHeight="0dp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/page_number_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        android:paddingHorizontal="18dp">
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
 </LinearLayout>
+
+
+

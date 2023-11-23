@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             currentPage = currentPage != noOfPages -1? currentPage+1 : currentPage;
             goToPage(currentPage);
         });
-        getSupportActionBar().hide();
     }
 
     private void paginationFooter(){

@@ -1,6 +1,7 @@
 package com.AdheliaPutriMaylaniJBusBR.jbus_android;
 
 import com.AdheliaPutriMaylaniJBusBR.jbus_android.R.id;
+import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.BaseResponse;
 import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.Bus;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.accounts.Account;
 import android.view.Gravity;
 import android.widget.Button;
 import android.os.Bundle;

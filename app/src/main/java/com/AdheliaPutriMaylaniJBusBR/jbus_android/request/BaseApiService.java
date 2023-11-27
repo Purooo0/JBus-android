@@ -2,6 +2,12 @@ package com.AdheliaPutriMaylaniJBusBR.jbus_android.request;
 import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.Account;
 
 import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.BaseResponse;
+import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.Bus;
+import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.Renter;
+import com.AdheliaPutriMaylaniJBusBR.jbus_android.model.Station;
+
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
@@ -28,4 +34,17 @@ public interface BaseApiService {
     Call<BaseResponse<Boolean>> topUp(
             @Path("id") int id,
             @Query("balance") int balance);
+
+    @POST("account/registerRenter")
+    Call<BaseResponse<Renter>> renter (
+            @Query("companyName") String companyName,
+            @Query("address") String address,
+            @Query("phoneNumber") String phoneNumber);
+
+    @GET("/bus/getMyBus")
+    Call<List<Bus>> getMyBus(
+            @Query("accountId") int accountId);
+
+    @GET("station/getAll")
+    Call<List<Station>> getAllStation();
 }

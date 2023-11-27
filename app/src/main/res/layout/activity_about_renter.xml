@@ -53,24 +53,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="16sp"
-        android:text="EMAIL" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="EMAIL" />
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="right"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        tools:text="-"/>
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            tools:text="-"/>
     </LinearLayout>
 
     <LinearLayout
@@ -136,22 +136,20 @@
         android:layout_marginTop="50dp"
         android:layout_marginHorizontal="24dp"
         android:paddingTop="10dp"
-        android:text="You're already registered as a renter"
+        android:text="You're not registered as a renter"
         android:textAlignment="center"
         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/manage_bus"
+    <TextView
+        android:id="@+id/register_company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="97dp"
+        android:layout_marginHorizontal="24dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:backgroundTint="#177F75"
         android:paddingHorizontal="16dp"
-        android:text="Manage Bus"
+        android:text="Register your Company"
         android:textAlignment="center"
-        app:cornerRadius="21dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold" />

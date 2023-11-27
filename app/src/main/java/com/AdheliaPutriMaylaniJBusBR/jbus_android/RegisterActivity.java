@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<BaseResponse<Account>> call, Throwable t) {
-                Toast.makeText(mContext, "Problem with the server", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Problem with the servmer", Toast.LENGTH_SHORT).show();
             }
         });
     }

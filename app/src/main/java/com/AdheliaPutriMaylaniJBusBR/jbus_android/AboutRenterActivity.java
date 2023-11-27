@@ -19,35 +19,49 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AboutMeActivity extends AppCompatActivity {
+public class AboutRenterActivity extends AppCompatActivity {
     Context mContext;
     BaseApiService mApiService;
     TextView name, email, balance;
     Button AmountButton;
     EditText AmountText;
+    private TextView registerCompany = null;
     public static Account loggedAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_me);
+        setContentView(R.layout.activity_about_renter);
 
         TextView usernameTextView = findViewById(R.id.username);
         TextView emailTextView = findViewById(R.id.email);
         TextView balanceTextView = findViewById(R.id.balance);
-        Button manageBusButton = findViewById(R.id.manage_bus);
+        registerCompany = findViewById(R.id.register_company);
 
-        usernameTextView.setText(LoginActivity.loggedAccount.name);
-        emailTextView.setText(LoginActivity.loggedAccount.email);
-        balanceTextView.setText("0");
+        if(LoginActivity.loggedAccount != null){
+            usernameTextView.setText(LoginActivity.loggedAccount.name);
+            emailTextView.setText(LoginActivity.loggedAccount.email);
+            balanceTextView.setText("0");
+        } else {
+            Toast.makeText(this, "Error fetching account data", Toast.LENGTH_SHORT).show();
 
-        manageBusButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AboutMeActivity.this, ManageBusActivity.class);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(AboutRenterActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        registerCompany.setOnClickListener(v -> {
+            moveActivity(this, RegisterRenterActivity.class);
         });
+    }
+
+    private void moveActivity(Context ctx, Class<?> cls) {
+        Intent intent = new Intent(ctx, cls);
+        startActivity(intent);
+    }
+
+    private void viewToast(Context ctx, String message) {
+        Toast.makeText(ctx, message, Toast.LENGTH_SHORT).show();
     }
 
     protected Boolean handleTopUp(int id, int balance){

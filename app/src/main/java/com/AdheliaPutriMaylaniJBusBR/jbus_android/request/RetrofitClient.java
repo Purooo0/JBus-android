@@ -3,13 +3,12 @@ package com.AdheliaPutriMaylaniJBusBR.jbus_android.request;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
-
 import retrofit2.converter.gson.GsonConverterFactory;
+
 public class RetrofitClient {
     private static Retrofit retrofit = null;
-
-    public static Retrofit getClient(String baseUrl) {
-        if (retrofit == null) {
+    public static Retrofit getClient(String baseUrl){
+        if(retrofit == null){
             retrofit = new Retrofit.Builder()
                     .client(okHttpClient())
                     .baseUrl(baseUrl)
@@ -24,7 +23,8 @@ public class RetrofitClient {
                 .addNetworkInterceptor(chain -> {
                     Request originalRequest = chain.request();
                     Request newRequest = originalRequest.newBuilder()
-                            .addHeader("Client-Adhelia", "apaYangLebihLucudari24?")
+                            //ganti value header di bawah ini dengan nama kalian
+                            .addHeader("Adhelia-Putri", "CapekBjir")
                             .build();
                     return chain.proceed(newRequest);
                 })

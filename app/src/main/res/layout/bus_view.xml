@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    tools:ignore="UselessParent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/busImage"
-        android:layout_width="84dp"
-        android:layout_height="84dp"
-        android:padding="16dp"
-        android:icon="@drawable/baseline_directions_bus_24"
-        tools:ignore="ContentDescription" />
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/bus_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:gravity="center|left"
+        android:text="Text 1"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        tools:ignore="RtlHardcoded" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="bottom|left"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="RtlHardcoded" />
+    <TextView
+        android:id="@+id/arrivalStation"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="-5dp"
+        android:gravity="center|left"
+        android:text="Text 2"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="top|left"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            tools:ignore="RtlHardcoded" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/departureStation"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center|left"
+        android:text="Text 3"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-35dp"
+        android:src="@drawable/baseline_directions_bus_filled_24">
+    </ImageView>
 </LinearLayout>

@@ -1,159 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#21B6A8"
-    tools:context=".AboutMeActivity">
+    tools:context=".AboutMeActivity"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/initial"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginVertical="100dp"
-        android:layout_marginLeft="159dp"
-        android:background="@drawable/circle"
-        android:backgroundTint="#177F75"
-        android:fontFamily="@font/audiowide"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="A"
-        android:textColor="@color/white"
-        android:textSize="48dp"></TextView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:text="USERNAME" />
+            android:id="@+id/initial_name"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginVertical="24dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="#FFEED9"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="#87C4FF"
+            android:textSize="48dp" />
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_marginTop="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            tools:text="-"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="16sp"
-        android:text="EMAIL" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="right"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        tools:text="-"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="20dp"
-            android:textSize="16sp"
-            android:text="BALANCE" />
-
-        <TextView
-            android:id="@+id/balance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="right"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            tools:text="-"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:orientation="horizontal" >
-
-        <EditText
-            android:id="@+id/AmountText"
-            android:layout_width="175dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="50dp"
-            android:ems="10"
-            android:hint="Amount"
-            android:textColorHint="@color/white"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/AmountButton"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="5"
-            android:backgroundTint="#177F75"
-            android:insetLeft="15dp"
-            android:insetRight="80dp"
-            android:text="Top Up"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:cornerRadius="21dp" />
+            android:orientation="vertical"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/average_sans"
+                    android:text="USERNAME"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/average_sans"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    tools:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/average_sans"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="EMAIL"
+                    />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:fontFamily="@font/average_sans"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    tools:text="-" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/average_sans"
+                    android:text="BALANCE"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/average_sans"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    tools:text="-" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/top_up_amount"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:textColorHint="@color/white"
+            android:hint="Top Up Amount"
+            android:gravity="center"
+            android:fontFamily="@font/average_sans"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.296" />
+
+        <Button
+            android:id="@+id/top_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" TOP UP"
+            android:backgroundTint="#FFEED9"
+            android:textColor="#87C4FF"
+            app:cornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.839"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.296" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginHorizontal="24dp"
-        android:paddingTop="10dp"
-        android:text="You're already registered as a renter"
-        android:textAlignment="center"
-        android:textColor="@color/white" />
+        android:layout_marginVertical="80dp">
 
-    <Button
-        android:id="@+id/manage_bus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="97dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:backgroundTint="#177F75"
-        android:paddingHorizontal="16dp"
-        android:text="Manage Bus"
-        android:textAlignment="center"
-        app:cornerRadius="21dp"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="36dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/status_renter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/average_sans"
+                android:textColor="@color/white"
+                android:text="You're not registered as a renter."/>
+
+            <TextView
+                android:id="@+id/register_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/average_sans"
+                android:text="Register your Company"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button_manage_bus"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#142C4C"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:text="Manage Bus"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="21dp" />
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

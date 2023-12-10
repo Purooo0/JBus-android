@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#21B6A8"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/search_menu"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="0dp"
         android:background="#00FFFFFF"
         android:icon="@drawable/outline_search_24"
         android:contentDescription="search_menu" />
@@ -31,46 +30,22 @@
         android:id="@+id/payment_menu"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:layout_marginBottom="400dp"
         android:background="#00FFFFFF"
         android:icon="@drawable/baseline_payments_24"
         android:contentDescription="payment_menu" />
 
-    <TextView
-        android:id="@+id/Title"
+    <ListView
+        android:id="@+id/bus_list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00000000"
-        android:fontFamily="@font/audiowide"
-        android:gravity="center"
-        android:text="JBUS"
-        android:layout_marginTop="-380dp"
-        android:textColor="@color/white"
-        android:textSize="100sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="-5dp"
-        android:layout_marginBottom="-70dp"
-        android:text="make your life easier"
-        android:textAlignment="center"
-        android:textColor="@color/white" />
-
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="-20dp"
-        tools:context=".MainActivity" />
+        android:layout_marginTop="20dp"
+        android:layout_weight="50" />
 
     <LinearLayout
         android:id="@+id/pagination_footer"
-        android:layout_width="wrap_content"
-        android:layout_height="71dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="21dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingHorizontal="21dp">
@@ -80,36 +55,37 @@
             android:layout_width="56dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#177F75"
             app:cornerRadius="21dp"
+            android:backgroundTint="#39A7FF"
             android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
             android:minHeight="0dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/page_number_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:backgroundTint="@color/blue_700"
+            android:paddingHorizontal="18dp">
+
+            <LinearLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue_700"
+                android:orientation="horizontal"/>
+
+        </HorizontalScrollView>
 
         <Button
             android:id="@+id/next_page"
             android:layout_width="56dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#177F75"
             android:layout_weight="1"
+            android:backgroundTint="#39A7FF"
             app:cornerRadius="21dp"
             android:drawableLeft="@drawable/baseline_arrow_forward_ios_24"
             android:minHeight="0dp" />
+
     </LinearLayout>
-
-    <HorizontalScrollView
-        android:id="@+id/page_number_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="25"
-        android:paddingHorizontal="18dp">
-
-        <LinearLayout
-            android:id="@+id/btn_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
-    </HorizontalScrollView>
 </LinearLayout>
-
-
-

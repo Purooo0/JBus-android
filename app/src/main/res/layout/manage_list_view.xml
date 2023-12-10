@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".ManageBusActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Textview1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="65dp"
+            android:gravity="center|left"
+            android:text="Account ID"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/Textview2"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginBottom="-5dp"
+            android:gravity="center|left"
+            android:text="Bus name"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="360dp"
+            android:layout_marginTop="-20dp"
+            android:src="@drawable/baseline_calendar_month_24">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/bus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-28dp"
+            android:src="@drawable/baseline_directions_bus_filled_24"></ImageView>
+    </LinearLayout>
+</LinearLayout>
